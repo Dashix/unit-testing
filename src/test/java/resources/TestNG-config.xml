@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="TestNG unit testing" parallel="classes" thread-count="1">
+
+    <test name="all tests">
+        <!--<groups>
+            <run>
+                <include name="base"/>
+                <include name="tg_ctg"/>
+                <exclude name="sin_cos"/>
+            </run>
+        </groups>-->
+
+        <packages>
+            <package name="com.epam.automation.mentoring.tests.testng.*"/>
+        </packages>
+
+    </test>
+
+    <test name="pow">
+        <parameter name="username" value="Daria"/>
+        <classes>
+            <class name="com.epam.automation.mentoring.tests.testng.PowCalcTest"/>
+        </classes>
+    </test>
+</suite>
